@@ -1,0 +1,7 @@
+www:
+  build: .
+  volumes:
+    - .:/src
+  ports:
+    - 9292:9292
+
