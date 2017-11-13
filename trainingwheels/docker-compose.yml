@@ -3,6 +3,7 @@ version: "3"
 services:
   www:
     build: www
+    image: localhost:5000/www
     ports:
       - 8000:5000
     user: nobody
