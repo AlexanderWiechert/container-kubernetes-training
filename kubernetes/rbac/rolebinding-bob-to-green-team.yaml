@@ -1,0 +1,13 @@
+  kind: RoleBinding
+  apiVersion: rbac.authorization.k8s.io/v1beta1
+  metadata:
+    name: bob-to-green-team
+    namespace: green
+  subjects:
+  - kind: User
+    name: bob
+    apiGroup: ""
+  roleRef:
+    kind: Role
+    name: green-team
+    apiGroup: ""

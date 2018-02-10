@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: env-pod
+spec:
+  restartPolicy: Never
+  containers:  
+  - name: app
+    image: "nginx:1.10-alpine"
+    command: ["env"]
+    env:
+    - name: HELLO
+      value: "Hello from the environment"

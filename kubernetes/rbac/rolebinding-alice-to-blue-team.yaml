@@ -1,0 +1,13 @@
+  kind: RoleBinding
+  apiVersion: rbac.authorization.k8s.io/v1beta1
+  metadata:
+    name: alice-to-blue-team
+    namespace: blue
+  subjects:
+  - kind: User
+    name: alice
+    apiGroup: ""
+  roleRef:
+    kind: Role
+    name: blue-team
+    apiGroup: ""

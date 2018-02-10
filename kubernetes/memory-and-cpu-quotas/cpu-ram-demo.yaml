@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cpu-ram-demo
+spec:
+  containers:
+  - name: nginx
+    image: nginx:1.10-alpine
+    resources:
+      requests:
+        memory: "64Mi"
+        cpu: "250m"
+      limits:
+        memory: "128Mi"
+        cpu: "1"
