@@ -6,7 +6,7 @@ spec:
   restartPolicy: Never
   containers:  
   - name: app
-    image: "nginx:1.10-alpine"
+    image: "alpine:3.5"
     command: ["env"]
     env:
     - name: HELLO

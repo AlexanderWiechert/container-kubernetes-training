@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: volumemount
+spec:
+  restartPolicy: Never
+  containers:
+  - name: app
+    image: "alpine:3.5"
+    command: ["cat", "/config/app.conf"]
+    volumeMounts:
+    - mountPath: /config
+      name: config
+  volumes:
+  - name: config
+    configMap:
+      name: volumemount-configmap
+      items:
+      - key: key-c
+        path: app.conf
