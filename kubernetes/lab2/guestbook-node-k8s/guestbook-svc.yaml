@@ -5,7 +5,7 @@ metadata:
   labels:
     app: guestbook
 spec:
-  type: LoadBalancer
+  type: NodePort
   ports:
     - name: web
       port: 3000

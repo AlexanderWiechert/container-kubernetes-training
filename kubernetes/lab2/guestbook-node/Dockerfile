@@ -4,4 +4,5 @@ WORKDIR /code
 ADD package.json /code/
 RUN npm install
 ADD . /code/
+EXPOSE 8000
 CMD ["node", "main.js"]
