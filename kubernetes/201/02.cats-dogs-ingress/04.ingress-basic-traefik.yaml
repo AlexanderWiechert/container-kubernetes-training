@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: cats-dogs
+  annotations:
+    ingress.kubernetes.io/custom-response-headers: header1:v1||header2:v2
+spec:
+  rules:
+  - host: "192.168.99.100.xip.io"
+    http:
+      paths:
+      - backend:
+          serviceName: cats
+          servicePort: 9000
+        path: /cats
+      - backend:
+          serviceName: dogs
+          servicePort: 9000
+        path: /dogs

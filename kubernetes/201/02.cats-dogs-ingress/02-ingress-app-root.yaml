@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: cats-dogs
+  annotations:
+    nginx.ingress.kubernetes.io/app-root: /dogs
+spec:
+  rules:
+  - host: "*.xip.io"
+    http:
+      paths:
+      - backend:
+          serviceName: cats
+          servicePort: 9000
+        path: /cats
+      - backend:
+          serviceName: dogs
+          servicePort: 9000
+        path: /dogs
