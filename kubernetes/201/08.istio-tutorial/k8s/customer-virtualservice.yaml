@@ -1,13 +1,49 @@
+#apiVersion: networking.istio.io/v1alpha3
+#kind: VirtualService
+#metadata:
+  #name: customer
+  #namespace: default
+#spec:
+  #gateways:
+  #- bookinfo-gateway
+  #hosts:
+  #- 'customer-tutorial.130.211.213.14.xip.io'
+  #http:
+  #- match:
+    #- uri:
+        #exact: /
+    #- uri:
+        #prefix: /
+    #route:
+    #- destination:
+        #host: customer
+        #port:
+          #number: 8080
+
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: customer-gateway
+spec:
+  selector:
+    istio: ingressgateway # use istio default controller
+  servers:
+  - port:
+      number: 80
+      name: http
+      protocol: HTTP
+    hosts:
+    - "*"
+---
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
   name: customer
-  namespace: default
 spec:
-  gateways:
-  - bookinfo-gateway
   hosts:
-  - 'customer-tutorial.130.211.213.14.xip.io'
+  - "*"
+  gateways:
+  - customer-gateway
   http:
   - match:
     - uri:
