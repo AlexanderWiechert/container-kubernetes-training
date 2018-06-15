@@ -6,8 +6,8 @@ spec:
   hosts:
   - recommendation
   http:
-  - route:
-    timeout: 1s
+  - timeout: 1s
+    route:
     - destination:
         host: recommendation
         subset: v2
