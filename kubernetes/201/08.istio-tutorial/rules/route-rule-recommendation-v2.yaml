@@ -10,5 +10,3 @@ spec:
     - destination:
         host: recommendation
         subset: v2
-        port:
-          number: 8080
