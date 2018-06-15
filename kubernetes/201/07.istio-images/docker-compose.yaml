@@ -1,0 +1,14 @@
+version: '3'
+services:
+  customer:
+    build: customer
+    image: docker.k8s.harbur.io/customer:v1
+  preference:
+    build: preference
+    image: docker.k8s.harbur.io/preference:v1
+  recommendation:
+    build: recommendation
+    image: docker.k8s.harbur.io/recommendation:v1
+  recommendation-v2:
+    build: recommendation-v2
+    image: docker.k8s.harbur.io/recommendation:v2
