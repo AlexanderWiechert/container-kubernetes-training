@@ -9,6 +9,13 @@ spec:
   - route:
     - destination:
         host: recommendation
+        subset: v1
+        port:
+          number: 8080
+      weight: 90
+    - destination:
+        host: recommendation
         subset: v2
         port:
           number: 8080
+      weight: 10
