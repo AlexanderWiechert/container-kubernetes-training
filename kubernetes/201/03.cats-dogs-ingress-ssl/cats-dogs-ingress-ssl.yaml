@@ -1,0 +1,24 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    kubernetes.io/tls-acme: "true"
+  name: cats-dogs
+spec:
+  rules:
+  - host: cats-dogs.deepdive.harbur.io
+    http:
+      paths:
+      - backend:
+          serviceName: cats
+          servicePort: 9000
+        path: /cats
+      - backend:
+          serviceName: dogs
+          servicePort: 9000
+        path: /dogs
+  tls:
+  - hosts:
+    - cats-dogs.deepdive.harbur.io
+    secretName: cats-dogs.deepdive.harbur.io-tls
