@@ -2,7 +2,7 @@ env:
   open:
     DISABLE_API: false
     STORAGE: local
-    ENABLE_OVERRIDE: true
+    ALLOW_OVERWRITE: true
 persistence:
   Enabled: true
   accessMode: ReadWriteOnce
