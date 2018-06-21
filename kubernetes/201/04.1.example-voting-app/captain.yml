@@ -1,0 +1,9 @@
+result:
+  build: result/Dockerfile
+  image: docker.k8s.harbur.io/example-voting-app-result
+vote:
+  build: vote/Dockerfile
+  image: docker.k8s.harbur.io/example-voting-app-vote
+worker:
+  build: worker/Dockerfile
+  image: docker.k8s.harbur.io/example-voting-app-worker

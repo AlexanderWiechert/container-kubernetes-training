@@ -1,0 +1,4 @@
+captain:
+  - captain.yml
+charts:
+  - charts/example-voting-app
