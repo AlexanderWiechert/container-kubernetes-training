@@ -21,7 +21,7 @@ spec:
       - env:
         - name: JAVA_OPTIONS
           value: -Xmx256m
-        image: docker.k8s.harbur.io/istio-tutorial/recommendation:v2
+        image: spiddy/istio-tutorial-recommendation:v2
         imagePullPolicy: IfNotPresent
         livenessProbe:
           exec:
