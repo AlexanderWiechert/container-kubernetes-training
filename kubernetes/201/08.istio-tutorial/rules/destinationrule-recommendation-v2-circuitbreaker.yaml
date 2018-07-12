@@ -11,7 +11,7 @@ spec:
         connectTimeout: 500ms
     outlierDetection:
       http:
-        baseEjectionTime: 180.000s
+        baseEjectionTime: 5.000s
         consecutiveErrors: 1
         interval: 1.000s
         maxEjectionPercent: 100
