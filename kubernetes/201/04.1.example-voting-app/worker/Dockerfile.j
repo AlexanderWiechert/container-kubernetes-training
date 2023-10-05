@@ -10,7 +10,7 @@ RUN ["mvn", "verify"]
 COPY ["src/main", "/code/src/main"]
 RUN ["mvn", "package"]
 
-FROM openjdk:8-jre-alpine
+FROM openjdk:21-ea-29-slim-bullseye
 
 COPY --from=build /code/target/worker-jar-with-dependencies.jar /
 
