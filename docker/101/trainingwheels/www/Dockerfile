@@ -1,4 +1,4 @@
-FROM python
+FROM python:3.12.0rc2-slim
 RUN pip install flask
 RUN pip install gunicorn
 RUN pip install redis
