@@ -4,7 +4,7 @@
   "description": "Guestbook test app for Harbur's Docker Workshop",
   "main": "main.js",
   "dependencies": {
-    "body-parser": "^1.15.0",
+    "body-parser": "^2.2.0",
     "express": "^4.13.4",
     "redis": "^2.6.0-1",
     "swig": "^1.4.2"
